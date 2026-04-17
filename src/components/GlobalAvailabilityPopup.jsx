@@ -20,12 +20,47 @@ const GlobalAvailabilityPopup = () => {
         }
     }, []);
 
+    // Lock body scroll when modal is visible
+    useEffect(() => {
+        if (isVisible) {
+            // Store current scroll position
+            const scrollY = window.scrollY;
+            // Add class to body to prevent scrolling
+            document.body.classList.add('modal-open');
+            document.body.style.top = `-${scrollY}px`;
+        } else {
+            // Remove class and restore scroll position
+            document.body.classList.remove('modal-open');
+            document.body.style.top = '';
+            if (document.body.style.top) {
+                window.scrollTo(0, parseInt(document.body.style.top || '0') * -1);
+            }
+        }
+
+        // Cleanup on unmount
+        return () => {
+            document.body.classList.remove('modal-open');
+            document.body.style.top = '';
+        };
+    }, [isVisible]);
+
     const handleClose = () => {
         if (dontShowAgain) {
             localStorage.setItem('global_popup_seen', 'true');
         }
         setIsVisible(false);
     };
+
+    // Close on escape key
+    useEffect(() => {
+        const handleEscape = (e) => {
+            if (e.key === 'Escape' && isVisible) {
+                handleClose();
+            }
+        };
+        window.addEventListener('keydown', handleEscape);
+        return () => window.removeEventListener('keydown', handleEscape);
+    }, [isVisible]);
 
     return (
         <AnimatePresence>
@@ -35,6 +70,7 @@ const GlobalAvailabilityPopup = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
+                    onClick={handleClose}
                 >
                     <motion.div
                         className="global-popup-container"
@@ -42,6 +78,7 @@ const GlobalAvailabilityPopup = () => {
                         animate={{ scale: 1, opacity: 1, y: 0 }}
                         exit={{ scale: 0.8, opacity: 0, y: 20 }}
                         transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                        onClick={(e) => e.stopPropagation()}
                     >
                         <button className="global-popup-close" onClick={handleClose} aria-label="Close">
                             &times;

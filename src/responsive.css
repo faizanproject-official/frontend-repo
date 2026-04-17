@@ -12,6 +12,25 @@
  * ================================================
  */
 
+/* ========== MODAL & OVERLAY FIXES (ALL SCREENS) ========== */
+/* Prevent body scroll when any modal/overlay is open */
+body.modal-open {
+    overflow: hidden !important;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+/* Fix for iOS Safari modal issues */
+@supports (-webkit-touch-callout: none) {
+    .global-popup-overlay,
+    .profile-dropdown,
+    .nav-menu.active {
+        position: fixed !important;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
 /* ========== LARGE DESKTOP (1400px+) ========== */
 @media (min-width: 1400px) {
     .hero-section {
@@ -249,6 +268,12 @@
     .action-buttons {
         gap: 1rem;
     }
+
+    /* ---- Profile Dropdown ---- */
+    .profile-dropdown {
+        width: 240px;
+        right: -10px;
+    }
 }
 
 /* ========== TABLET PORTRAIT (max 768px) ========== */
@@ -390,11 +415,44 @@
     .dashboard-header {
         margin-left: -1rem;
         margin-right: -1rem;
+        padding: 1rem;
     }
 
     /* ---- Dashboard widget sections ---- */
     .etf-section[style] {
         flex-direction: column !important;
+    }
+
+    /* ---- Profile Dropdown Mobile ---- */
+    .profile-dropdown {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 20px 20px 0 0;
+        box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.2);
+        animation: slideUp 0.3s ease-out;
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* ---- Modal Fixes for Tablet ---- */
+    .global-popup-container {
+        max-width: 90%;
     }
 }
 
@@ -486,6 +544,33 @@
     .kyc-form-grid {
         grid-template-columns: 1fr !important;
     }
+
+    /* ---- Dashboard ---- */
+    .dashboard-header {
+        padding: 0.75rem 1rem;
+    }
+
+    .user-info {
+        display: none;
+    }
+
+    .user-avatar-container {
+        width: 38px;
+        height: 38px;
+    }
+
+    /* ---- Bottom Nav ---- */
+    .bottom-nav {
+        padding: 0.4rem 0.2rem;
+    }
+
+    .nav-item span {
+        font-size: 0.65rem;
+    }
+
+    .nav-icon {
+        font-size: 1.1rem;
+    }
 }
 
 /* ========== MOBILE (max 480px) ========== */
@@ -550,6 +635,15 @@
     .calc-section {
         flex-direction: column !important;
     }
+
+    /* ---- Bottom Nav ---- */
+    .nav-item {
+        padding: 0.4rem;
+    }
+
+    .nav-item span {
+        font-size: 0.6rem;
+    }
 }
 
 /* ========== SMALL MOBILE (max 375px) ========== */
@@ -582,8 +676,8 @@
 
     /* ---- Nav ---- */
     .logo-icon img {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
 
     /* ---- Footer ---- */
@@ -601,5 +695,103 @@
 
     .telegram-link {
         font-size: 12px;
+    }
+
+    /* ---- Dashboard ---- */
+    .dashboard-main {
+        padding: 0.75rem;
+        padding-bottom: 80px;
+    }
+
+    /* ---- Bottom Nav ---- */
+    .bottom-nav {
+        padding: 0.3rem 0.1rem;
+    }
+
+    .nav-item span {
+        font-size: 0.55rem;
+    }
+}
+
+/* ========== LANDSCAPE MOBILE FIXES ========== */
+@media (max-height: 500px) and (orientation: landscape) {
+    /* ---- Dashboard ---- */
+    .dashboard-sidebar {
+        display: none;
+    }
+
+    .dashboard-main {
+        margin-left: 0;
+    }
+
+    .bottom-nav {
+        display: flex;
+        padding: 0.3rem 0.5rem;
+    }
+
+    /* ---- Auth ---- */
+    .auth-page {
+        padding: 10px;
+    }
+
+    .auth-card {
+        min-height: auto;
+    }
+
+    .auth-form-side {
+        padding: 20px;
+    }
+
+    /* ---- Profile Dropdown ---- */
+    .profile-dropdown {
+        max-height: 80vh;
+    }
+}
+
+/* ========== TOUCH DEVICE OPTIMIZATIONS ========== */
+@media (hover: none) and (pointer: coarse) {
+    /* Larger touch targets */
+    .nav-link,
+    .sidebar-link,
+    .action-btn,
+    .cta-btn,
+    .nav-item {
+        min-height: 44px;
+    }
+
+    /* Remove hover effects on touch devices */
+    .action-btn:hover {
+        transform: none;
+    }
+
+    .cta-btn:hover {
+        transform: none;
+    }
+
+    /* Better tap feedback */
+    .nav-item:active,
+    .action-btn:active,
+    .cta-btn:active {
+        opacity: 0.8;
+        transform: scale(0.98);
+    }
+}
+
+/* ========== SAFE AREA INSETS (iPhone X+) ========== */
+@supports (padding: env(safe-area-inset-bottom)) {
+    .bottom-nav {
+        padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
+    }
+
+    .footer-container {
+        padding-bottom: calc(35px + env(safe-area-inset-bottom));
+    }
+
+    .dashboard-main {
+        padding-bottom: calc(90px + env(safe-area-inset-bottom));
+    }
+
+    .global-popup-overlay {
+        padding-bottom: env(safe-area-inset-bottom);
     }
 }

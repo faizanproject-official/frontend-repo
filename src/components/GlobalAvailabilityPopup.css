@@ -4,26 +4,38 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile */
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    /* Prevent body scroll when modal is open */
+    overscroll-behavior: contain;
 }
 
 .global-popup-container {
     background: linear-gradient(135deg, rgba(26, 10, 46, 0.95) 0%, rgba(45, 27, 78, 0.95) 100%);
-    width: 90%;
+    width: 100%;
     max-width: 450px;
+    max-height: 90vh;
     padding: 35px 30px;
     border-radius: 24px;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
     text-align: center;
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     color: #ffffff;
+    /* Ensure modal doesn't shift on mobile */
+    margin: auto;
+    box-sizing: border-box;
 }
 
 /* Glass shine effect - adjusted for dark theme */
@@ -44,20 +56,21 @@
 
 .global-popup-close {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     background: rgba(255, 255, 255, 0.1);
     border: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #ccc;
     cursor: pointer;
     transition: all 0.2s;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    z-index: 10;
 }
 
 .global-popup-close:hover {
@@ -102,6 +115,7 @@
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
     width: 100%;
+    max-width: 280px;
     font-family: 'Inter', sans-serif;
     box-shadow: 0 4px 15px rgba(74, 159, 212, 0.3);
 }
@@ -111,9 +125,14 @@
     box-shadow: 0 6px 20px rgba(74, 159, 212, 0.5);
 }
 
+.global-popup-btn:active {
+    transform: translateY(0);
+}
+
 .global-popup-footer {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     font-size: 0.9rem;
     color: #94a3b8;
@@ -128,4 +147,98 @@
     cursor: pointer;
     accent-color: #4A9FD4;
     border-radius: 4px;
+    flex-shrink: 0;
+}
+
+/* ========== MOBILE RESPONSIVE ========== */
+@media (max-width: 576px) {
+    .global-popup-overlay {
+        padding: 15px;
+        align-items: flex-start;
+        padding-top: 50px;
+    }
+
+    .global-popup-container {
+        padding: 30px 20px;
+        border-radius: 20px;
+        max-height: 85vh;
+    }
+
+    .global-popup-close {
+        top: 12px;
+        right: 12px;
+        width: 36px;
+        height: 36px;
+        font-size: 1.3rem;
+    }
+
+    .global-popup-title {
+        font-size: 1.5rem;
+        padding-right: 30px;
+    }
+
+    .global-popup-text {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+    }
+
+    .global-popup-btn {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+    }
+
+    .global-popup-footer {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .global-popup-overlay {
+        padding: 10px;
+        padding-top: 30px;
+    }
+
+    .global-popup-container {
+        padding: 25px 18px;
+        border-radius: 16px;
+    }
+
+    .global-popup-title {
+        font-size: 1.3rem;
+    }
+
+    .global-popup-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* ========== LANDSCAPE MOBILE ========== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .global-popup-overlay {
+        padding: 10px;
+        align-items: center;
+    }
+
+    .global-popup-container {
+        max-height: 95vh;
+        padding: 20px 25px;
+    }
+
+    .global-popup-title {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+
+    .global-popup-text {
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+    }
+
+    .global-popup-actions {
+        gap: 10px;
+    }
+
+    .global-popup-btn {
+        padding: 10px 20px;
+    }
 }

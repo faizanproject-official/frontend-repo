@@ -343,6 +343,8 @@
     font-family: 'Inter', sans-serif;
     animation: fadeIn 0.2s ease-out;
     border: 1px solid #e2e8f0;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
 @keyframes fadeIn {
