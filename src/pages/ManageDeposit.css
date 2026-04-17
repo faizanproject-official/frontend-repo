@@ -1,0 +1,266 @@
+.manage-deposit-container {
+    padding: 0 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.deposit-tabs-header {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.deposit-tab-btn {
+    background: none;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    color: #64748b;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    font-weight: 500;
+}
+
+.deposit-tab-btn.active {
+    color: #0f172a;
+    border-bottom-color: #0f172a;
+    font-weight: 600;
+}
+
+/* New Deposit Content */
+.deposit-back-actions {
+    margin-bottom: 2rem;
+}
+
+.back-dash-btn {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Card Icons Row */
+.card-icons-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Professional Card Visuals Redesign to match Screenshot */
+.credit-card-visual {
+    flex: 1;
+    min-width: 250px;
+    height: 160px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.credit-card-visual:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Elements */
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-brand-logo {
+    height: 35px;
+    object-fit: contain;
+}
+
+.card-number-display {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    color: #0077b6;
+    /* Blue text */
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.card-info-group.left {
+    text-align: left;
+}
+
+.card-info-group.right {
+    text-align: right;
+}
+
+.card-label {
+    font-size: 0.75rem;
+    color: #0077b6;
+    /* Blue text */
+    font-weight: 500;
+}
+
+/* Payment Layout Split */
+.card-payment-split-layout {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.payment-info-side {
+    flex: 1;
+    min-width: 280px;
+    border-right: 1px solid #f1f5f9;
+    /* Divider line */
+    padding-right: 20px;
+}
+
+.payment-form-side {
+    flex: 1.5;
+    min-width: 320px;
+}
+
+@media (max-width: 768px) {
+    .card-payment-split-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .payment-info-side {
+        border-right: none;
+        border-bottom: 1px solid #f1f5f9;
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+}
+
+/* Payment Details Typography */
+.pay-det-title {
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: #1e293b;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.pay-det-prod {
+    font-size: 1rem;
+    color: #475569;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.ssl-note {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.terms-note {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+.terms-note a {
+    color: #008CBA;
+    text-decoration: none;
+}
+
+/* Accordion Styling Enhancements */
+.payment-methods-accordion {
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    border-top: 3px solid #e2e8f0;
+    /* Thicker top line */
+}
+
+.pm-header-label {
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid #e2e8f0;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.pm-item {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.pm-item:last-child {
+    border-bottom: none;
+}
+
+.pm-title {
+    padding: 1rem 1.5rem;
+    background-color: #f8fafc;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    color: #334155;
+    border-left: 4px solid transparent;
+    transition: all 0.2s;
+}
+
+.pm-item.active .pm-title {
+    background-color: #fff;
+    border-left: 4px solid transparent;
+    /* Keep it clean */
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.card-logos-small {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-logos-small img {
+    height: 24px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Embedded Stripe Form overrides */
+.embedded-stripe-form {
+    max-width: 100%;
+}
+
+.embedded-stripe-form .form-control {
+    background-color: #fff;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 0.95rem;
+}
+
+/* Button style update within the form if accessible */
+.embedded-stripe-form button[type="submit"] {
+    background-color: #008CBA;
+    /* Match "Make a payment!" blue */
+    font-weight: bold;
+    text-transform: none;
+    font-size: 1rem;
+}

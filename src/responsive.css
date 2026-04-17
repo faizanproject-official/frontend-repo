@@ -1,0 +1,605 @@
+/*
+ * ================================================
+ *  GLOBAL RESPONSIVE MEDIA QUERIES
+ *  Breakpoints:
+ *    1400px+ = Large Desktop
+ *    1200px   = Desktop / Laptop
+ *    992px    = Tablet Landscape
+ *    768px    = Tablet Portrait
+ *    576px    = Large Mobile
+ *    480px    = Mobile
+ *    375px    = Small Mobile (iPhone SE etc.)
+ * ================================================
+ */
+
+/* ========== LARGE DESKTOP (1400px+) ========== */
+@media (min-width: 1400px) {
+    .hero-section {
+        padding: 80px 100px;
+    }
+
+    .etf-section {
+        padding: 80px 100px;
+    }
+}
+
+/* ========== LAPTOP / DESKTOP (max 1200px) ========== */
+@media (max-width: 1200px) {
+
+    /* Hero */
+    .hero-section {
+        padding: 60px 50px;
+    }
+
+    .hero-title {
+        font-size: 44px;
+    }
+
+    .stats-number {
+        font-size: 52px;
+    }
+
+    .stats-label {
+        font-size: 36px;
+    }
+
+    .image-circle {
+        width: 380px;
+        height: 380px;
+    }
+
+    /* Home sections */
+    .etf-section {
+        padding: 60px 40px;
+    }
+
+    .trading-features {
+        padding: 80px 40px;
+    }
+
+    .more-than-trading {
+        padding: 80px 40px;
+    }
+
+    .faq-section {
+        padding: 80px 40px;
+    }
+
+    /* Footer */
+    .footer-container {
+        padding: 50px 60px 35px;
+    }
+
+    .footer-map-section {
+        flex: 0 0 400px;
+    }
+
+    /* StatsBar font */
+    .stats-bar {
+        font-size: 17px;
+    }
+}
+
+/* ========== TABLET LANDSCAPE (max 992px) ========== */
+@media (max-width: 992px) {
+
+    /* ---- StatsBar ---- */
+    .stats-container {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0 20px;
+    }
+
+    .stats-spacer {
+        display: none;
+    }
+
+    .social-icons {
+        margin-top: 5px;
+    }
+
+    .stats-bar {
+        font-size: 14px;
+    }
+
+    /* ---- Nav ---- */
+    .main-navbar {
+        padding: 0 20px;
+    }
+
+    .nav-menu {
+        gap: 20px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    /* ---- Hero ---- */
+    .hero-section {
+        padding: 50px 30px;
+        min-height: auto;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-left {
+        max-width: 100%;
+    }
+
+    .hero-right {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 38px;
+    }
+
+    .stats-number {
+        font-size: 48px;
+    }
+
+    .stats-label {
+        font-size: 30px;
+    }
+
+    .image-circle {
+        width: 320px;
+        height: 320px;
+    }
+
+    /* ---- Home sections ---- */
+    .section-header-top {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-no-fees,
+    .card-qr,
+    .card-peace,
+    .card-support {
+        margin: 0;
+    }
+
+    .more-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .trading-features {
+        padding: 60px 30px;
+    }
+
+    .more-than-trading {
+        padding: 60px 30px;
+    }
+
+    .etf-section {
+        padding: 60px 30px;
+    }
+
+    .faq-section {
+        padding: 60px 30px;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-heading {
+        font-size: 32px;
+    }
+
+    /* ---- Footer ---- */
+    .footer-top-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-map-section {
+        flex: none;
+        width: 100%;
+    }
+
+    .footer-links-grid {
+        gap: 40px;
+    }
+
+    .footer-container {
+        padding: 50px 40px 35px;
+        border-radius: 28px;
+    }
+
+    /* ---- Auth ---- */
+    .auth-image-side {
+        display: none;
+    }
+
+    .auth-card {
+        max-width: 600px;
+        margin: 0 auto;
+        min-height: auto;
+    }
+
+    /* ---- Dashboard ---- */
+    .dashboard-sidebar {
+        width: 240px;
+    }
+
+    .dashboard-main {
+        margin-left: 240px;
+        padding: 0 1.5rem 80px 1.5rem;
+    }
+
+    .action-buttons {
+        gap: 1rem;
+    }
+}
+
+/* ========== TABLET PORTRAIT (max 768px) ========== */
+@media (max-width: 768px) {
+
+    /* ---- StatsBar ---- */
+    .stats-bar {
+        display: none;
+    }
+
+    /* ---- Hero ---- */
+    .hero-section {
+        padding: 40px 20px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-btn {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .stats-number {
+        font-size: 40px;
+    }
+
+    .stats-label {
+        font-size: 26px;
+    }
+
+    .stats-desc {
+        font-size: 14px;
+    }
+
+    .image-circle {
+        width: 260px;
+        height: 260px;
+    }
+
+    /* ---- Home headings / sections ---- */
+    .features-heading {
+        font-size: 28px;
+    }
+
+    .faq-heading {
+        font-size: 28px;
+    }
+
+    .testimonials-heading {
+        font-size: 28px;
+    }
+
+    .cta-title {
+        font-size: 28px;
+    }
+
+    .trading-features {
+        padding: 50px 20px;
+    }
+
+    .more-than-trading {
+        padding: 50px 20px;
+    }
+
+    .etf-section {
+        padding: 50px 20px;
+    }
+
+    .faq-section {
+        padding: 50px 20px;
+    }
+
+    /* ---- Footer ---- */
+    .footer-container {
+        padding: 50px 25px 30px;
+        border-radius: 24px;
+    }
+
+    .footer-brand-name {
+        font-size: 18px;
+    }
+
+    .footer-links-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footer-map-section iframe {
+        height: 220px !important;
+    }
+
+    /* ---- Auth ---- */
+    .auth-form-side {
+        padding: 40px 25px;
+    }
+
+    .auth-header h1 {
+        font-size: 26px;
+    }
+
+    .auth-card {
+        border-radius: 20px;
+    }
+
+    /* ---- Dashboard ---- */
+    .dashboard-sidebar {
+        display: none;
+    }
+
+    .dashboard-main {
+        margin-left: 0;
+        padding: 1rem;
+        padding-bottom: 90px;
+        width: 100%;
+    }
+
+    .action-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-header {
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }
+
+    /* ---- Dashboard widget sections ---- */
+    .etf-section[style] {
+        flex-direction: column !important;
+    }
+}
+
+/* ========== LARGE MOBILE (max 576px) ========== */
+@media (max-width: 576px) {
+
+    /* ---- Nav ---- */
+    .signup-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .login-btn {
+        font-size: 13px;
+    }
+
+    /* ---- Hero ---- */
+    .hero-section {
+        padding: 30px 16px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .image-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    /* ---- Home ---- */
+    .stock-panel {
+        flex-direction: column;
+    }
+
+    .mini-chart {
+        flex: none;
+        width: 100%;
+    }
+
+    .features-heading {
+        font-size: 24px;
+    }
+
+    /* ---- Footer ---- */
+    .footer-container {
+        padding: 40px 20px 25px;
+        border-radius: 20px;
+    }
+
+    .footer-brand-name {
+        font-size: 16px;
+    }
+
+    .telegram-link {
+        font-size: 13px;
+        padding: 9px 16px;
+    }
+
+    .footer-map-section iframe {
+        height: 180px !important;
+    }
+
+    /* ---- Auth ---- */
+    .auth-page {
+        padding: 20px 10px;
+    }
+
+    .auth-form-side {
+        padding: 30px 20px;
+    }
+
+    .auth-header h1 {
+        font-size: 24px;
+    }
+
+    .auth-submit-btn {
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    /* ---- Contact / Support ---- */
+    .contact-grid,
+    .support-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* ---- KYC ---- */
+    .kyc-form-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ========== MOBILE (max 480px) ========== */
+@media (max-width: 480px) {
+
+    /* ---- Hero ---- */
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    /* ---- Dashboard ---- */
+    .action-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .total-assets-value {
+        font-size: 1.75rem;
+    }
+
+    /* ---- Home ---- */
+    .section-tag-pill {
+        font-size: 11px;
+    }
+
+    .faq-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .faq-icon-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .faq-question {
+        font-size: 16px;
+    }
+
+    .faq-answer {
+        font-size: 14px;
+    }
+
+    /* ---- Footer ---- */
+    .footer-map-section {
+        width: 100%;
+    }
+
+    .footer-map-section iframe {
+        height: 160px !important;
+    }
+
+    /* ---- Investment Offers ---- */
+    .offers-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .calc-section {
+        flex-direction: column !important;
+    }
+}
+
+/* ========== SMALL MOBILE (max 375px) ========== */
+@media (max-width: 375px) {
+
+    /* ---- Auth ---- */
+    .auth-header h1 {
+        font-size: 22px;
+    }
+
+    .form-group input {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+
+    /* ---- Hero ---- */
+    .hero-title {
+        font-size: 22px;
+    }
+
+    .cta-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .image-circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    /* ---- Nav ---- */
+    .logo-icon img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* ---- Footer ---- */
+    .footer-brand-name {
+        font-size: 14px;
+    }
+
+    .footer-description {
+        font-size: 13px;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+
+    .telegram-link {
+        font-size: 12px;
+    }
+}

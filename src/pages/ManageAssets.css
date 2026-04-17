@@ -1,0 +1,131 @@
+.manage-assets-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.profile-avatar-large {
+    width: 80px;
+    height: 80px;
+    background-color: #3b82f6;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.profile-details h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #1e293b;
+}
+
+.profile-email {
+    color: #64748b;
+    margin: 5px 0 10px 0;
+}
+
+.profile-badge {
+    background-color: #dcfce7;
+    color: #166534;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.assets-summary-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.assets-summary-card h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #334155;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 1rem;
+}
+
+.asset-row {
+    margin-bottom: 1.5rem;
+}
+
+.asset-total-row {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.asset-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.asset-label {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.asset-value {
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.asset-value.highlight {
+    color: #2563eb;
+    font-size: 1.5rem;
+}
+
+.account-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.account-btn {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    background-color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #475569;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.account-btn:hover {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+.account-btn.danger {
+    color: #ef4444;
+    border-color: #fecaca;
+    background-color: #fef2f2;
+}
+
+.account-btn.danger:hover {
+    background-color: #fee2e2;
+    border-color: #fca5a5;
+}

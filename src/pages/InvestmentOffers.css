@@ -1,0 +1,265 @@
+/* ===== Investment Offers Page ===== */
+
+.io-page {
+    background-color: #f8fafc;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ----- Hero Banner ----- */
+.io-hero {
+    position: relative;
+    height: 200px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0a4d8c 100%);
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.io-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=80') center/cover no-repeat;
+    opacity: 0.2;
+}
+
+.io-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(10, 30, 60, 0.5), rgba(10, 30, 60, 0.9));
+}
+
+.io-hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 24px 60px;
+}
+
+.io-hero-content h1 {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ----- Main Layout ----- */
+.io-main {
+    display: flex;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    align-items: flex-start;
+}
+
+/* ----- Left Column: Descriptions ----- */
+.io-descriptions {
+    flex: 1.2;
+    color: #334155;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.io-intro {
+    color: #4A9FD4;
+    margin-bottom: 20px;
+}
+
+.io-descriptions p {
+    margin-bottom: 16px;
+    color: #475569;
+}
+
+.io-descriptions strong {
+    color: #1e293b;
+    font-weight: 700;
+}
+
+.io-plan-desc {
+    margin-top: 20px;
+}
+
+.io-plan-desc h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.io-plan-desc p {
+    color: #4A9FD4;
+    line-height: 1.7;
+}
+
+.io-tagline {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 2px solid #e2e8f0;
+}
+
+.io-tagline h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1.5;
+}
+
+/* ----- Right Column: Calculator ----- */
+.io-calculator {
+    flex: 1;
+    position: sticky;
+    top: 100px;
+}
+
+.io-calc-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 24px;
+}
+
+.io-calc-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Slider */
+.io-slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.io-slider {
+    flex: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 5px;
+    border-radius: 3px;
+    background: linear-gradient(to right, #4A9FD4, #1e3a5f);
+    outline: none;
+    cursor: pointer;
+}
+
+.io-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #4A9FD4;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 0 3px rgba(74, 159, 212, 0.2);
+}
+
+.io-slider-min,
+.io-slider-max {
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 14px;
+    white-space: nowrap;
+    background-color: #e2e8f0;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* Grid of inputs */
+.io-calc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.io-calc-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.io-calc-field label {
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.io-calc-field input,
+.io-calc-field select {
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #1e293b;
+    background-color: #f8fafc;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.io-calc-field input:focus,
+.io-calc-field select:focus {
+    border-color: #4A9FD4;
+    background-color: #fff;
+}
+
+.io-calc-field input[readonly] {
+    background-color: #f1f5f9;
+    cursor: default;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* Make Deposit Button */
+.io-deposit-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #4A9FD4, #1e3a5f);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-transform: uppercase;
+}
+
+.io-deposit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(74, 159, 212, 0.4);
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 900px) {
+    .io-main {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 40px;
+    }
+
+    .io-calculator {
+        position: static;
+        width: 100%;
+    }
+
+    .io-hero-content {
+        padding: 20px;
+    }
+
+    .io-hero-content h1 {
+        font-size: 26px;
+    }
+
+    .io-calc-grid {
+        grid-template-columns: 1fr;
+    }
+}

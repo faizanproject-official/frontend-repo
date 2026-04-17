@@ -1,0 +1,19 @@
+.App {
+    text-align: center;
+    min-height: 100vh;
+}
+
+.placeholder-page {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #1a0a2e 100%);
+    color: #ffffff;
+}
+
+.placeholder-page h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+}
