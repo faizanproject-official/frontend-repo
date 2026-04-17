@@ -25,7 +25,7 @@ const CheckoutForm = () => {
     const stripe = useStripe();
     const elements = useElements();
     const [amount, setAmount] = useState(10);
-    const [currency, setCurrency] = useState('usd');
+    const [currency] = useState('usd');
     const [error, setError] = useState(null);
     const [processing, setProcessing] = useState(false);
     const [succeeded, setSucceeded] = useState(false);
