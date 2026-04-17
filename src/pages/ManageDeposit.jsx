@@ -414,7 +414,7 @@ const ManageDeposit = ({ defaultTab = 'new' }) => {
                                                         Your encryption is protected by 256-bit SSL encryption.
                                                     </p>
                                                     <p className="terms-note">
-                                                        By proceeding with this payment option, you agree with our <a href="#">Terms of Service</a> and confirm that you have read our <a href="#">Privacy Policy</a>. You can cancel payment at any time.
+                                                        By proceeding with this payment option, you agree with our <a href="/compliance">Terms of Service</a>  <a href="/compliance">Privacy Policy</a>. You can cancel payment at any time.
                                                     </p>
                                                 </div>
 

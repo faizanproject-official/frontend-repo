@@ -3,7 +3,7 @@ import axios from 'axios';
 // Prefer environment-based configuration, fall back to local dev API
 const baseURL =
     process.env.REACT_APP_API_BASE_URL ||
-    'http://127.0.0.1:8000/api';
+    'https://backend-repo-drr2.onrender.com/api';
 
 const api = axios.create({
     baseURL,
