@@ -18,7 +18,6 @@ const ManageDeposit = ({ defaultTab = 'new' }) => {
 
     // Crypto State
     const [cryptoAmount, setCryptoAmount] = useState('');
-    const [cryptoCoin, setCryptoCoin] = useState('Bitcoin');
     const conversionRate = 0.00001; // Mock rate
 
     // Update state if prop changes (e.g. navigation via sidebar)

@@ -8,7 +8,7 @@ import avatar1 from '../assets/man.jpg';
 import boxImage from '../assets/security-visual.png';
 import InvestmentPlans from '../components/InvestmentPlans';
 
-import { stockTickerData, etfCategories, stockListings } from '../data/mockData';
+import { etfCategories, stockListings } from '../data/mockData';
 import GlobalAvailabilityPopup from '../components/GlobalAvailabilityPopup';
 
 import ActivitiesToday from '../components/ActivitiesToday';
@@ -374,7 +374,7 @@ const Home = () => {
                                     <div className="tradingview-widget-container" id="economic-calendar-widget" style={{ width: '100%', height: '100%' }}>
                                         <div className="tradingview-widget-container__widget" style={{ width: '100%', height: '100%' }}></div>
                                         <div className="tradingview-widget-copyright">
-                                            <a href="https://www.tradingview.com/economic-calendar/" rel="noopener nofollow" target="_blank">
+                                            <a href="https://www.tradingview.com/economic-calendar/" rel="noopener noreferrer" target="_blank">
                                                 <span className="blue-text">Economic Calendar</span>
                                             </a>
                                             <span className="trademark"> by TradingView</span>
@@ -386,7 +386,7 @@ const Home = () => {
                                     <div className="tradingview-widget-container" id="stock-market-widget" style={{ width: '100%', height: '100%' }}>
                                         <div className="tradingview-widget-container__widget" style={{ width: '100%', height: '100%' }}></div>
                                         <div className="tradingview-widget-copyright">
-                                            <a href="https://www.tradingview.com/markets/stocks-usa/" rel="noopener nofollow" target="_blank">
+                                            <a href="https://www.tradingview.com/markets/stocks-usa/" rel="noopener noreferrer" target="_blank">
                                                 <span className="blue-text">Stocks today</span>
                                             </a>
                                             <span className="trademark"> by TradingView</span>
@@ -398,7 +398,7 @@ const Home = () => {
                                     <div className="tradingview-widget-container" id="market-overview-widget" style={{ width: '100%', height: '100%' }}>
                                         <div className="tradingview-widget-container__widget" style={{ width: '100%', height: '100%' }}></div>
                                         <div className="tradingview-widget-copyright">
-                                            <a href="https://www.tradingview.com/markets/" rel="noopener nofollow" target="_blank">
+                                            <a href="https://www.tradingview.com/markets/" rel="noopener noreferrer" target="_blank">
                                                 <span className="blue-text">World markets</span>
                                             </a>
                                             <span className="trademark"> by TradingView</span>
@@ -412,7 +412,7 @@ const Home = () => {
                                     <div className="tradingview-widget-container" id="forex-cross-rates-widget" style={{ width: '100%', height: '100%' }}>
                                         <div className="tradingview-widget-container__widget" style={{ width: '100%', height: '100%' }}></div>
                                         <div className="tradingview-widget-copyright">
-                                            <a href="https://www.tradingview.com/markets/currencies/" rel="noopener nofollow" target="_blank">
+                                            <a href="https://www.tradingview.com/markets/currencies/" rel="noopener noreferrer" target="_blank">
                                                 <span className="blue-text">Forex market</span>
                                             </a>
                                             <span className="trademark"> by TradingView</span>
@@ -565,7 +565,7 @@ const Home = () => {
                         <div className="tradingview-widget-container" id="crypto-heatmap-widget" style={{ width: '100%', height: '100%' }}>
                             <div className="tradingview-widget-container__widget" style={{ width: '100%', height: '100%' }}></div>
                             <div className="tradingview-widget-copyright">
-                                <a href="https://www.tradingview.com/heatmap/crypto/" rel="noopener nofollow" target="_blank">
+                                <a href="https://www.tradingview.com/heatmap/crypto/" rel="noopener noreferrer" target="_blank">
                                     <span className="blue-text">Crypto Heatmap</span>
                                 </a>
                                 <span className="trademark"> by TradingView</span>

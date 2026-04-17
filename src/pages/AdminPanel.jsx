@@ -28,7 +28,6 @@ const AdminPanel = () => {
     const [contacts, setContacts] = useState([]);
     const [stocks, setStocks] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
     const [searchQuery, setSearchQuery] = useState('');
     const [userProfile, setUserProfile] = useState(null);
     const [viewTicket, setViewTicket] = useState(null); // Admin viewing specific ticket
@@ -134,11 +133,6 @@ const AdminPanel = () => {
         holding: 0.00
     });
     const [toasts, setToasts] = useState([]);
-    const [kycForm, setKycForm] = useState({
-        firstName: '', lastName: '', address: '', country: '', city: '',
-        frontId: null, backId: null
-    });
-    const [kycLoading, setKycLoading] = useState(false);
 
     const showToast = (message, type = 'success') => {
         const id = Date.now();
@@ -447,7 +441,7 @@ const AdminPanel = () => {
         } catch (err) {
             console.error("Fetch data error:", err);
             // Only set error if it's not a background refresh, to avoid disrupting the UI
-            if (!isBackground) setError(err.response?.data?.message || 'Failed to fetch data');
+            if (!isBackground) showToast(err.response?.data?.message || 'Failed to fetch data', 'error');
         } finally {
             if (!isBackground) setLoading(false);
         }
@@ -526,10 +520,11 @@ const AdminPanel = () => {
         setRejectionReason('');
     };
 
+  // Stock search (available for future use)
     const filteredStocks = stocks.filter(s =>
-        s.symbol.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        s.name.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    s.symbol.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    s.name.toLowerCase().includes(searchQuery.toLowerCase())
+);
 
     const renderContent = () => {
         if (loading && activeTab !== 'stocks' && activeTab !== 'transfer' && activeTab !== 'deposits') return <div className="loading-spinner">Loading dashboard data...</div>;
@@ -1213,7 +1208,7 @@ const AdminPanel = () => {
                                             {paymentMethod === 'card' && (
                                                 <>
                                                     <p>All Card information and payment processing are secured with <strong>SSL Secure Payment</strong>. Your encryption is protected by 256-bit SSL encryption.</p>
-                                                    <p>By proceeding with this payment option, you agree with our <a href="#">Terms of Service</a> and confirm that you have read our <a href="#">Privacy Policy</a>. You can cancel payment at any time.</p>
+                                                    <p>By proceeding with this payment option, you agree with our <a href="/compliance">Terms of Service</a> and confirm that you have read our <a href="/compliance">Privacy Policy</a>. You can cancel payment at any time.</p>
                                                 </>
                                             )}
                                             {paymentMethod === 'bank' && (
