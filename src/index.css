@@ -23,6 +23,8 @@
 html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%; /* Prevent font scaling on mobile */
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
 }
 
 body {
