@@ -248,8 +248,8 @@
         /* Dynamic viewport height */
         background: rgba(15, 23, 42, 0.98);
         /* Dark background */
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
