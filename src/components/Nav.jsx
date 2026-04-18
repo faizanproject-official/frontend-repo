@@ -20,6 +20,10 @@ function Nav() {
     return (
         <div className="sticky-nav-wrapper">
             <StatsBar />
+            {/* Overlay for Mobile Menu */}
+            {isMobileMenuOpen && (
+                <div className="mobile-menu-overlay" onClick={closeMobileMenu}></div>
+            )}
             {/* Main Navbar */}
             <nav className="main-navbar">
                 <div className="navbar-container">
