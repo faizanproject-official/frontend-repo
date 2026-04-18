@@ -1,0 +1,226 @@
+/* Global Footer Styling */
+.main-footer {
+    padding: 40px 20px;
+    background-color: transparent;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: #004d99;
+    border-radius: 40px;
+    padding: 60px 80px 40px;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle background pattern/glow */
+.footer-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(74, 159, 212, 0.1) 0%, transparent 70%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Top Row: Left content + Map on the right */
+.footer-top-row {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-brand-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo img {
+    width: auto;
+    height: 50px;
+    object-fit: contain;
+}
+
+.footer-brand-name {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.footer-description {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+.footer-links-grid {
+    display: flex;
+    justify-content: flex-start;
+    gap: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 15px;
+}
+
+.footer-column ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #89d1f5;
+    padding-left: 5px;
+}
+
+/* Map Section */
+.footer-map-section {
+    flex: 0 0 500px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-map-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer-map-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-map-wrapper iframe {
+    display: block;
+    border-radius: 10px;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.copyright {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Telegram Link */
+.footer-telegram {
+    display: flex;
+    align-items: center;
+}
+
+.telegram-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.telegram-link:hover {
+    background: #229ED9;
+    border-color: #229ED9;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(34, 158, 217, 0.4);
+}
+
+.telegram-icon {
+    font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .footer-top-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-map-section {
+        flex: none;
+        width: 100%;
+    }
+
+    .footer-links-grid {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 60px 40px 40px;
+        border-radius: 30px;
+    }
+
+    .footer-links-grid {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}

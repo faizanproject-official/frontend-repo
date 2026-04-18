@@ -1,0 +1,232 @@
+/* Contact Page Styles */
+.contact-page {
+    font-family: 'Inter', sans-serif;
+    color: #334155;
+    background-color: #f8fafc;
+}
+
+/* Hero Section */
+.contact-hero {
+    background: linear-gradient(135deg, #0f2847 0%, #00509d 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 60px;
+}
+
+.contact-hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Info Cards Section */
+.contact-info-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.info-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: #63b3ed; /* Light blue from image */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon-box svg {
+    width: 30px;
+    height: 30px;
+    color: #0f2847; /* Dark blue icon */
+}
+
+.info-content h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    color: #0f172a;
+}
+
+.info-content p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+.section-header {
+    margin-bottom: 40px;
+}
+
+.section-header h4 {
+    color: #4A9FD4;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+}
+
+.contact-content-wrapper {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Map Side */
+.map-container {
+    flex: 1;
+    min-width: 300px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Form Side */
+.form-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.form-container h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #0f172a;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 16px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #1e293b;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4A9FD4;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(74, 159, 212, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.error-text {
+    color: #ef4444;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.submit-btn {
+    background-color: #63b3ed; /* Light blue button */
+    color: #0f2847;
+    font-weight: 700;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 30px; /* Pillow shape as in image */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #4299e1;
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-hero {
+        padding: 60px 20px;
+    }
+    
+    .contact-hero h1 {
+        font-size: 36px;
+    }
+}
