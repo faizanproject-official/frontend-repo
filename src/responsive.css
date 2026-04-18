@@ -16,9 +16,6 @@
 /* Prevent body scroll when any modal/overlay is open */
 body.modal-open {
     overflow: hidden !important;
-    position: fixed;
-    width: 100%;
-    height: 100%;
 }
 
 /* Fix for iOS Safari modal issues */

@@ -154,8 +154,8 @@
 @media (max-width: 576px) {
     .global-popup-overlay {
         padding: 15px;
-        align-items: flex-start;
-        padding-top: 50px;
+        align-items: center;
+        justify-content: center;
     }
 
     .global-popup-container {

@@ -37,14 +37,12 @@ body {
     overflow-x: hidden; /* Prevent horizontal scroll on mobile */
     min-height: 100vh;
     min-height: 100dvh; /* Dynamic viewport height for mobile */
+    width: 100%;
 }
 
 /* Body scroll lock when modal is open */
 body.modal-open {
     overflow: hidden !important;
-    position: fixed;
-    width: 100%;
-    height: 100%;
 }
 
 /* Responsive Images & Media */
