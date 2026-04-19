@@ -261,6 +261,19 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.user-profile:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+.dropdown-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 .user-avatar {
@@ -332,8 +345,9 @@
 
 .profile-dropdown {
     position: absolute;
-    top: 60px;
+    top: 100%;
     right: 0;
+    margin-top: 8px;
     width: 240px;
     background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
     border-radius: 12px;
@@ -384,10 +398,10 @@
 }
 
 .dropdown-item {
-    padding: 0.7rem 1rem;
+    padding: 0.75rem 1rem;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     color: #e2e8f0;
     font-size: 0.9rem;
     cursor: pointer;
