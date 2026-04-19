@@ -9,8 +9,6 @@ import boxImage from '../assets/security-visual.png';
 import InvestmentPlans from '../components/InvestmentPlans';
 
 import { etfCategories, stockListings } from '../data/mockData';
-import GlobalAvailabilityPopup from '../components/GlobalAvailabilityPopup';
-
 import ActivitiesToday from '../components/ActivitiesToday';
 
 const Home = () => {
@@ -787,7 +785,6 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <GlobalAvailabilityPopup />
         </motion.div >
     );
 };
