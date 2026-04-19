@@ -427,8 +427,9 @@ const DashboardLayout = ({ children, activePage }) => {
               style={{ cursor: "pointer", userSelect: "none" }}
             >
               <div className="user-info">
-                <span className="user-name">{user?.name || "User"}</span>
-                <span
+<span className="user-name">
+  {user?.name?.split(' ').map(word => word?.charAt(0).toUpperCase() + word?.slice(1)?.toLowerCase()).join(' ') || "User"}
+</span>                <span
                   className="user-role"
                   style={{
                     fontSize: "0.75rem",
