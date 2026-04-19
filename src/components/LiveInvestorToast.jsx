@@ -60,12 +60,20 @@ const LiveInvestorToast = () => {
         }, 4000);
     }, []);
 
-    useEffect(() => {
-        // First toast immediately
+useEffect(() => {
+    // First toast after 3 seconds
+    const initialTimeout = setTimeout(() => {
         showToast();
-        const interval = setInterval(showToast, 1500);
-        return () => clearInterval(interval);
-    }, [showToast]);
+    }, 3000);
+
+    // Then show new toast every 15 seconds
+    const interval = setInterval(showToast, 15000);
+
+    return () => {
+        clearTimeout(initialTimeout);
+        clearInterval(interval);
+    };
+}, [showToast]);
 
     const dismiss = (id) => setToasts(prev => prev.filter(t => t.id !== id));
 
