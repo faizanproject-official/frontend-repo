@@ -503,7 +503,16 @@ const DashboardLayout = ({ children, activePage }) => {
             {showDropdown && (
               <div className="profile-dropdown">
                 <div className="dropdown-header">
-                  <div className="dropdown-user-name">{user?.name}</div>
+                  <div className="dropdown-user-name">
+                    {user?.name
+                      ?.split(" ")
+                      .map(
+                        (word) =>
+                          word?.charAt(0).toUpperCase() +
+                          word?.slice(1)?.toLowerCase(),
+                      )
+                      .join(" ")}
+                  </div>{" "}
                   <div className="dropdown-user-email">{user?.email}</div>
                 </div>
                 <div className="dropdown-divider"></div>
