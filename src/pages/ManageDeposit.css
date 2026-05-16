@@ -142,6 +142,9 @@
     .card-payment-split-layout {
         flex-direction: column;
         gap: 20px;
+        display: block;
+        position: relative;
+        width: 100%;
     }
 
     .payment-info-side {
@@ -173,6 +176,7 @@
     color: #64748b;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    
 }
 
 .terms-note {

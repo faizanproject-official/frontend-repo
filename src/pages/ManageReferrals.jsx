@@ -15,7 +15,7 @@ const ManageReferrals = () => {
                 if (response.data && response.data.name) {
                     // Clean name for URL if needed, or use ID. Using name as per screenshot example 'Nothingatall'
                     const refCode = response.data.name.replace(/\s+/g, '');
-                    setReferralLink(`https://investment-smart-crypto.com?reference=${refCode}`);
+                    setReferralLink(`https://invest-ment.org?reference=${refCode}`);
                 }
             } catch (error) {
                 console.error("Failed to fetch user for referral link", error);

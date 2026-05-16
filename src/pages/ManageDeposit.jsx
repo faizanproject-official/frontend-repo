@@ -100,7 +100,7 @@ const ManageDeposit = ({ defaultTab = 'new' }) => {
                                 <div className="credit-card-visual visa-card">
                                     <div className="card-top">
                                         <div className="card-logo-box">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" alt="Visa" className="card-brand-logo" style={{ height: '30px' }} />
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Visa_Inc._logo_%282021%E2%80%93present%29.svg" alt="Visa" className="card-brand-logo" style={{ height: '30px' }} />
                                         </div>
                                     </div>
                                     <div className="card-number-display">**** **** **** 0000</div>
@@ -133,7 +133,7 @@ const ManageDeposit = ({ defaultTab = 'new' }) => {
                                 {/* Discover */}
                                 <div className="credit-card-visual discover-card">
                                     <div className="card-top">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Discover_Card_logo.svg/2560px-Discover_Card_logo.svg.png" alt="Discover" className="card-brand-logo" style={{ height: '25px' }} />
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/DiscoverCard.svg/1920px-DiscoverCard.svg.png" alt="Discover" className="card-brand-logo" style={{ height: '25px' }} />
                                     </div>
                                     <div className="card-number-display">**** **** **** 0000</div>
                                     <div className="card-bottom">
@@ -397,9 +397,9 @@ const ManageDeposit = ({ defaultTab = 'new' }) => {
                                     <div className="pm-title" onClick={() => toggleMethod('card')}>
                                         <span>Credit Card</span>
                                         <div className="card-logos-small">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/American_Express_logo_%282018%29.svg/1205px-American_Express_logo_%282018%29.svg.png" height="20" alt="Amex" style={{ marginRight: '5px' }} />
+                                            <img src="https://en.wikipedia.org/wiki/File:American_Express_logo_(2018).svg" height="20" alt="Amex" style={{ marginRight: '5px' }} />
                                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" height="20" alt="Mastercard" style={{ marginRight: '5px' }} />
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Discover_Card_logo.svg/2560px-Discover_Card_logo.svg.png" height="20" alt="Discover" />
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/DiscoverCard.svg/1920px-DiscoverCard.svg.png" height="20" alt="Discover" />
                                         </div>
                                     </div>
                                     {selectedMethod === 'card' && (
