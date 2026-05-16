@@ -61,6 +61,8 @@
     height: 130px;
     border-radius: 10%;
     object-fit: contain;
+    position: relative;
+    align-items: center;
 }
 
 /* Navigation Menu */
