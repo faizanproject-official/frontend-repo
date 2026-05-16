@@ -156,7 +156,7 @@ const NewWithdraw = () => {
             <div className="kyc-container">
                 <div className="kyc-card">
                     <div className="auth-header">
-                        <h2 style="color:black">Request Withdrawal</h2>
+                        <h2 style={{ color: "black" }}>Request Withdrawal</h2>
                         <p>Submit a secure withdrawal request</p>
                     </div>
 
