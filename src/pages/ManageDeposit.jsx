@@ -237,11 +237,11 @@ const ManageDeposit = ({ defaultTab = 'new' }) => {
                                                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
                                                         {/* BTC Section */}
                                                         <div className="crypto-wallet-box" style={{ background: '#1e293b', padding: '1.5rem', borderRadius: '8px', border: '1px solid #334155' }}>
-                                                            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
+                                                            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem',position:"relative"}}>
                                                                 <span style={{ fontSize: '1.5rem', marginRight: '10px' }}>₿</span>
                                                                 <span style={{ fontWeight: 'bold', fontSize: '1.1rem' }}>Bitcoin (BTC)</span>
                                                             </div>
-                                                            <div style={{ background: 'white', padding: '10px', borderRadius: '8px', width: '150px', height: '150px', margin: '0 auto 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                                            <div style={{ background: 'white', padding: '10px', borderRadius: '8px', width: '100%', height: '100%', margin: '0 auto 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                                                 {/* Placeholder QR */}
                                                                 <div style={{ width: '100%', height: '100%', background: 'black', opacity: '0.1' }}></div>
                                                                 <span style={{ position: 'absolute', color: 'black', fontWeight: 'bold' }}>QR CODE</span>
