@@ -711,81 +711,23 @@
     }
 }
 
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: #94a3b8;
+    font-size: 0.75rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 8px;
+    flex: 1;
+    transition: color 0.2s ease;
+}
 
-@media (max-width: 768px) {
-    /* 1. Sidebar ko hide krna */
-    .dashboard-sidebar {
-        display: none !important;
-    }
-
-    /* 2. Main content ko full width dena aur bottom space banana */
-    .dashboard-main {
-        margin-left: 0 !important;
-        width: 100% !important;
-        padding: 1.25rem; /* Mobile par padding thodi kam */
-        padding-bottom: 80px; /* Taake bottom nav content ko na chupaye */
-    }
-
-    /* 3. Assets Stats Row ko block/column krna taake aamne saamne crash na ho */
-    .assets-stats-row {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        padding: 0;
-    }
-
-    .asset-stat-item {
-        font-size: 0.95rem;
-    }
-
-    /* 4. Bottom Navigation Styling (Sirf Mobile par dikhegi) */
-    .bottom-nav {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 65px;
-        background-color: #0f172a; /* Same as sidebar background (Slate 900) */
-        border-top: 1px solid #1e293b;
-        justify-content: space-around;
-        align-items: center;
-        z-index: 999;
-        box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
-        padding: 0 10px;
-    }
-
-    /* Nav items container */
-    .nav-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: #94a3b8; /* Dim text for inactive */
-        font-size: 0.7rem;
-        font-weight: 500;
-        cursor: pointer;
-        gap: 4px;
-        flex: 1;
-        transition: all 0.2s ease;
-    }
-
-    /* SVGs in Bottom Nav */
-    .nav-icon svg {
-        width: 20px;
-        height: 20px;
-        transition: transform 0.2s ease;
-    }
-
-    /* Active Page link highlight color */
-    .nav-item.active {
-        color: #38bdf8; /* Sky 400 (matches logo theme) */
-    }
-
-    .nav-item.active .nav-icon svg {
-        transform: translateY(-2px); /* Active icon halka sa upar uthega */
-        color: #38bdf8;
-    }
+.nav-item.active {
+    color: #3b82f6;
+    font-weight: 600;
 }
 
 .nav-icon {
