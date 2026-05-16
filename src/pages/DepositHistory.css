@@ -1,0 +1,98 @@
+/* Base Styling */
+.data-table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 12px 10px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.admin-table th {
+    background: #f7f7f7;
+    font-weight: 600;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.amount {
+    font-weight: 600;
+}
+
+.error-text {
+    color: red;
+}
+
+.no-data {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Status badges */
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.status-badge.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-badge.success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-badge.failed {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* =========================
+   📱 Mobile Responsive (768px)
+========================= */
+@media (max-width: 768px) {
+
+    .auth-card {
+        padding: 15px;
+    }
+
+    .admin-table th,
+    .admin-table td {
+        font-size: 12px;
+        padding: 8px 6px;
+    }
+
+    .auth-header h1 {
+        font-size: 18px;
+    }
+
+    .auth-header p {
+        font-size: 12px;
+    }
+
+    /* Table scroll fix */
+    .data-table-container {
+        overflow-x: auto;
+    }
+
+    .status-badge {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+}

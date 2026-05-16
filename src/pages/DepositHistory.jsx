@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
-import './Auth.css';
+import './DepositHistory.css';
 
 const DepositHistory = ({ isEmbedded }) => {
     const [transactions, setTransactions] = useState([]);
@@ -34,7 +34,7 @@ const DepositHistory = ({ isEmbedded }) => {
                     </div>
 
                     {loading && <p>Loading...</p>}
-                    {error && <p style={{ color: 'red' }}>{error}</p>}
+                    {error && <p className="error-text">{error}</p>}
 
                     {!loading && !error && (
                         <div className="data-table-container">
@@ -48,26 +48,28 @@ const DepositHistory = ({ isEmbedded }) => {
                                         <th>Status</th>
                                     </tr>
                                 </thead>
+
                                 <tbody>
                                     {transactions.length === 0 && (
                                         <tr>
-                                            <td colSpan="5" style={{ textAlign: 'center', padding: '20px' }}>
+                                            <td colSpan="5" className="no-data">
                                                 No transactions found.
                                             </td>
                                         </tr>
                                     )}
+
                                     {transactions.map((t) => (
                                         <tr key={t.id}>
                                             <td>{new Date(t.created_at).toLocaleString()}</td>
-                                            <td style={{ textTransform: 'capitalize' }}>{t.type}</td>
-                                            <td style={{ textTransform: 'capitalize' }}>
+                                            <td className="capitalize">{t.type}</td>
+                                            <td className="capitalize">
                                                 {t.type === 'transfer'
                                                     ? `${t.from_account} → ${t.to_account}`
                                                     : t.from_account === 'external'
                                                         ? 'Credit Card'
                                                         : t.from_account}
                                             </td>
-                                            <td style={{ fontWeight: 600 }}>
+                                            <td className="amount">
                                                 ${parseFloat(t.amount).toFixed(2)}
                                             </td>
                                             <td>
@@ -88,4 +90,3 @@ const DepositHistory = ({ isEmbedded }) => {
 };
 
 export default DepositHistory;
-
