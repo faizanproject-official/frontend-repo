@@ -180,7 +180,7 @@
 }
 
 .terms-note {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     color: #94a3b8;
     line-height: 1.5;
 }
@@ -242,7 +242,7 @@
 
 .card-logos-small img {
     height: 24px;
-    width: auto;
+    width: 19px;
     object-fit: contain;
     display: block;
 }

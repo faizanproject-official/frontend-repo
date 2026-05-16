@@ -397,7 +397,7 @@ const ManageDeposit = ({ defaultTab = 'new' }) => {
                                     <div className="pm-title" onClick={() => toggleMethod('card')}>
                                         <span>Credit Card</span>
                                         <div className="card-logos-small">
-                                            <img src="https://en.wikipedia.org/wiki/File:American_Express_logo_(2018).svg" height="20" alt="Amex" style={{ marginRight: '5px' }} />
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/American_Express_logo_%282018%29.svg/960px-American_Express_logo_%282018%29.svg.png" height="20" alt="Amex" style={{ marginRight: '5px' }} />
                                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" height="20" alt="Mastercard" style={{ marginRight: '5px' }} />
                                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/DiscoverCard.svg/1920px-DiscoverCard.svg.png" height="20" alt="Discover" />
                                         </div>
