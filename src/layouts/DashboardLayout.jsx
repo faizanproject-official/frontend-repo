@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import "./DashboardLayout.css"; // Nayi responsive wali file ka link
 import "../pages/Dashboard.css"; // Use existing dashboard styles
 import logo from "../assets/new_logo.png";
 
