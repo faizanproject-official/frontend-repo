@@ -225,6 +225,7 @@
   .profile-dropdown {
     right: 4px;
     width: 220px;
+    z-index: 1;
   }
 
   /* Grid Adjustments for dynamic layout cards */
