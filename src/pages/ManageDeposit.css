@@ -2,7 +2,6 @@
     padding: 0 1.5rem;
     max-width: 100%;
     margin: 0 auto;
-    width: 100%;
 }
 
 .deposit-tabs-header {
@@ -57,11 +56,11 @@
 .credit-card-visual {
     flex: 1;
     min-width: 250px;
-    height: 160px;
+    height: 184px;
     background: #fff;
     border: 1px solid #e2e8f0;
     border-radius: 4px;
-    padding: 20px;
+    padding: 33px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
