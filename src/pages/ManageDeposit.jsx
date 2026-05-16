@@ -292,7 +292,7 @@ const ManageDeposit = ({ defaultTab = 'new' }) => {
                                                 <div className="crypto-step-1">
                                                     <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#1e293b' }}>Details</h3>
                                                     <p style={{ marginBottom: '0.5rem', color: '#475569' }}><strong>Product:</strong> Fund Account</p>
-                                                    <p style={{ marginBottom: '1rem', color: '#64748b', lineHeight: '1.3' }}>
+                                                    <p className="Cryptopara" style={{ marginBottom: '1rem', color: '#64748b', lineHeight: '1.3' }}>
                                                         All deposits done using this channel will be processed by your Wallet/Exchange. Your account will automatically be funded as soon as the payment is confirmed on the Blockchain. Thank you for choosing Investment Smart Crypto Investing.
                                                     </p>
                                                     <button
