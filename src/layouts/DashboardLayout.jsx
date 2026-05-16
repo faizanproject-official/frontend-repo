@@ -253,7 +253,7 @@ const DashboardLayout = ({ children, activePage }) => {
                     className={`sidebar-link sub-link ${activePage === "withdraw-new" ? "active" : ""}`}
                     onClick={() => navigate("/withdraw/new")}
                   >
-                    Draw Now
+                   Withdraw Now
                   </div>
                 </li>
                 <li>

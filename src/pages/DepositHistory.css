@@ -8,6 +8,7 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
+    border: none;
 }
 
 .admin-table th,

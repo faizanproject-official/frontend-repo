@@ -23,7 +23,7 @@ const ManageWithdraw = ({ defaultTab = 'new' }) => {
                         className={`withdraw-tab-btn ${activeTab === 'new' ? 'active' : ''}`}
                         onClick={() => setActiveTab('new')}
                     >
-                        Draw Now
+                       Withdraw Now
                     </button>
                     <button
                         className={`withdraw-tab-btn ${activeTab === 'history' ? 'active' : ''}`}
