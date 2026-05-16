@@ -69,7 +69,10 @@
 @media (max-width: 768px) {
 
     .auth-card {
+        width: 50%;
         padding: 15px;
+        display: block;
+        position: relative;
     }
 
     .admin-table th,
