@@ -195,6 +195,9 @@
     background-color: #fff;
     border: 1px solid #e2e8f0;
     border-top: 3px solid #e2e8f0;
+    width: 100%;
+    position: relative;
+    display: block;
     /* Thicker top line */
 }
 
