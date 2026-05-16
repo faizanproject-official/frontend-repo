@@ -193,4 +193,11 @@
         flex-direction: column;
         gap: 1rem;
     }
+    .transfer-card {
+    width: 100%;
+    border-radius: 10px;
+    padding: 0.5rem;
+    color: #fff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
 }
